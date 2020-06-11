@@ -2,7 +2,6 @@ package com.abduhanifan.dicoding.myflexiblefragment
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_option_dialog.*
 
 /**
@@ -68,7 +68,7 @@ class OptionDialogFragment : DialogFragment(), View.OnClickListener {
             R.id.btn_close -> dialog?.cancel()
 
             R.id.btn_choose -> {
-                val checkedRadioButtonId  = rg_options.checkedRadioButtonId
+                val checkedRadioButtonId = rg_options.checkedRadioButtonId
                 if (checkedRadioButtonId != -1) {
                     var coach: String? = null
                     when (checkedRadioButtonId) {
